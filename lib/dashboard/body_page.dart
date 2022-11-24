@@ -55,7 +55,6 @@ class _MainDashboardBodyPageState extends State<MainDashboardBodyPage> {
                 return _buildPageItem(position);
               }),
         ),
-
         // dots indicator section
         DotsIndicator(
           dotsCount: 5,
