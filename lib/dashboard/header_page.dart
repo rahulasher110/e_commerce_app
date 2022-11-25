@@ -65,7 +65,8 @@ class _MainDashboardPageState extends State<MainDashboardPage> {
             ),
           ),
         ),
-        const MainDashboardBodyPage()
+        const Expanded(
+            child: SingleChildScrollView(child: MainDashboardBodyPage()))
       ],
     ));
   }
