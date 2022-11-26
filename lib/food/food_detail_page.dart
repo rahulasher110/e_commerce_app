@@ -2,6 +2,7 @@ import 'package:e_commerce_app/utils/dimensions.dart';
 import 'package:e_commerce_app/utils/icons.dart';
 import 'package:e_commerce_app/widgets/app_columns.dart';
 import 'package:e_commerce_app/widgets/big_text.dart';
+import 'package:e_commerce_app/widgets/expandable_text.dart';
 import 'package:e_commerce_app/widgets/icons_and_text.dart';
 import 'package:e_commerce_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
@@ -65,7 +66,17 @@ class PopularFoodDetailPage extends StatelessWidget {
                         SizedBox(
                           height: Dimensions.height20,
                         ),
-                        BigText(text: 'Introduce')
+                        BigText(text: 'Introduce'),
+                        SizedBox(
+                          height: Dimensions.height10,
+                        ),
+                        const Expanded(
+                          child: SingleChildScrollView(
+                            child: ExpandableTextWidget(
+                                text:
+                                    'Everything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & AnsEverything to Know About Coding, Decoding, and Reasoning With Questions & Ans'),
+                          ),
+                        )
                       ],
                     )),
               ))

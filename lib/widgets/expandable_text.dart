@@ -1,4 +1,6 @@
 import 'package:e_commerce_app/utils/dimensions.dart';
+import 'package:e_commerce_app/widgets/small_text.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -33,6 +35,44 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: secondHalf.isEmpty
+          ? SmallText(
+              text: firstHalf,
+              size: Dimensions.font16,
+              color: Colors.grey,
+            )
+          : Column(
+              children: [
+                SmallText(
+                  text:
+                      hiddenText ? '$firstHalf ...' : (firstHalf + secondHalf),
+                  size: Dimensions.font16,
+                  color: Colors.grey,
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      hiddenText = !hiddenText;
+                    });
+                  },
+                  child: Row(
+                    children: [
+                      SmallText(
+                        text: hiddenText ? 'Show more' : 'Show less',
+                        color: Colors.blue,
+                      ),
+                      Icon(
+                        hiddenText
+                            ? Icons.arrow_drop_down
+                            : Icons.arrow_drop_up_outlined,
+                        color: Colors.blue,
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+    );
   }
 }
