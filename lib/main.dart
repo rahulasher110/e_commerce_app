@@ -1,7 +1,6 @@
 import 'package:e_commerce_app/dashboard/header_page.dart';
 import 'package:e_commerce_app/food/food_detail_page.dart';
 import 'package:e_commerce_app/food/recomended_food_detail.dart';
-import 'package:e_commerce_app/todo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'helper/dependencies.dart' as dep;
